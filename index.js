@@ -1,7 +1,8 @@
 var swarm = require('webrtc-swarm')
 var signalhub = require('signalhub')
-var hyperize = require('./')
+var hyperize = require('hyper-textarea')
 var memdb = require('memdb')
+var query = require('query-string')
 
 document.body.innerHTML = ''
 
@@ -11,8 +12,15 @@ ta.setAttribute('rows', 8)
 document.body.appendChild(ta)
 var string = hyperize(ta, memdb())
 
+var q = query.parse(location.search)
+var doc = (''+Math.random()).substring(2, 25)
+if (q.doc) {
+  doc = q.doc
+} else {
+  window.location.href += '?doc=' + doc
+}
 
-var hub = signalhub('hyper-textarea', [
+var hub = signalhub('hyperpad-' + doc, [
   'https://signalhub.mafintosh.com'
 ])
 
