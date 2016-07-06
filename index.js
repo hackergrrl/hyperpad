@@ -9,17 +9,17 @@ function getHeight () {
   var html = document.documentElement
 
   // return Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)
-  return document.body.clientHeight
+  return document.body.clientHeight - 115
 }
 
 var ta = document.getElementById('pad')
 ta.setAttribute('placeholder', 'Write your brilliant things here! ♥')
 ta.style.width = "100%"
-ta.style.height = (getHeight() - 95) + 'px'
+ta.style.height = getHeight() + 'px'
 
 onresize = function () {
   ta.style.width = "100%"
-  ta.style.height = (getHeight() - 95) + 'px'
+  ta.style.height = getHeight() + 'px'
 }
 
 var string = hyperize(ta, memdb())

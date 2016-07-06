@@ -8,7 +8,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "tape test/*.js"
+    "start": "browserify index.js > bundle.js && ecstatic -p 9966"
   },
   "dependencies": {
     "hyper-textarea": "0.0.4",
@@ -18,7 +18,7 @@
     "webrtc-swarm": "^2.6.1"
   },
   "devDependencies": {
-    "tape": "*"
+    "browserify": "^13.0.1"
   },
   "license": "ISC"
 }
