@@ -4,16 +4,22 @@ var hyperize = require('hyper-textarea')
 var memdb = require('memdb')
 var query = require('query-string')
 
-var ta = document.createElement('textarea')
-// ta.setAttribute('cols', 80)
-// ta.setAttribute('rows', 24)
-document.body.appendChild(ta)
-ta.style.width = '100%'
-ta.style.height = '100%'
+function getHeight () {
+  var body = document.body
+  var html = document.documentElement
+
+  // return Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)
+  return document.body.clientHeight
+}
+
+var ta = document.getElementById('pad')
+ta.setAttribute('placeholder', 'Write your brilliant things here! ♥')
+ta.style.width = "100%"
+ta.style.height = (getHeight() - 95) + 'px'
 
 onresize = function () {
-  ta.style.width = '100%'
-  ta.style.height = '100%'
+  ta.style.width = "100%"
+  ta.style.height = (getHeight() - 95) + 'px'
 }
 
 var string = hyperize(ta, memdb())
