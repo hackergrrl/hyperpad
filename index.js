@@ -4,12 +4,18 @@ var hyperize = require('hyper-textarea')
 var memdb = require('memdb')
 var query = require('query-string')
 
-document.body.innerHTML = ''
-
 var ta = document.createElement('textarea')
-ta.setAttribute('cols', 80)
-ta.setAttribute('rows', 8)
+// ta.setAttribute('cols', 80)
+// ta.setAttribute('rows', 24)
 document.body.appendChild(ta)
+ta.style.width = '100%'
+ta.style.height = '100%'
+
+onresize = function () {
+  ta.style.width = '100%'
+  ta.style.height = '100%'
+}
+
 var string = hyperize(ta, memdb())
 
 var q = query.parse(location.search)
@@ -19,6 +25,8 @@ if (q.doc) {
 } else {
   window.location.href += '?doc=' + doc
 }
+
+document.getElementById('title').innerHTML = 'Untitled ' + doc
 
 var hub = signalhub('hyperpad-' + doc, [
   'https://signalhub.mafintosh.com'
