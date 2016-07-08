@@ -24,6 +24,10 @@ onresize = function () {
   ta.style.height = getHeight() + 'px'
 }
 
+onNewPad = function () {
+  window.open(window.location.href.substring(0, window.location.href.indexOf('?')))
+}
+
 var q = query.parse(location.search)
 var doc = 'Untitled_' + (''+Math.random()).substring(2, 25)
 if (q.doc) {
