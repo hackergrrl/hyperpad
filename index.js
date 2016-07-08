@@ -1,7 +1,9 @@
 var swarm = require('webrtc-swarm')
 var signalhub = require('signalhub')
 var hyperize = require('hyper-textarea')
-var memdb = require('memdb')
+// var memdb = require('memdb')
+var leveljs = require('level-js')
+var levelup = require('levelup')
 var query = require('query-string')
 
 function getHeight () {
@@ -22,8 +24,6 @@ onresize = function () {
   ta.style.height = getHeight() + 'px'
 }
 
-var string = hyperize(ta, memdb())
-
 var q = query.parse(location.search)
 var doc = (''+Math.random()).substring(2, 25)
 if (q.doc) {
@@ -31,6 +31,8 @@ if (q.doc) {
 } else {
   window.location.href += '?doc=' + doc
 }
+
+var string = hyperize(ta, levelup('hyperpad-'+doc, { db: leveljs }))
 
 document.getElementById('title').innerHTML = 'Untitled ' + doc
 

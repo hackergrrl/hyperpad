@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "hyper-textarea": "0.0.4",
+    "level-js": "^2.2.4",
     "memdb": "^1.3.1",
     "query-string": "^4.2.2",
     "signalhub": "^4.7.4",
