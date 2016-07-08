@@ -25,7 +25,7 @@ onresize = function () {
 }
 
 var q = query.parse(location.search)
-var doc = (''+Math.random()).substring(2, 25)
+var doc = 'Untitled_' + (''+Math.random()).substring(2, 25)
 if (q.doc) {
   doc = q.doc
 } else {
@@ -34,7 +34,7 @@ if (q.doc) {
 
 var string = hyperize(ta, levelup('hyperpad-'+doc, { db: down }))
 
-document.getElementById('title').innerHTML = 'Untitled ' + doc
+document.getElementById('title').innerHTML = doc
 
 var hub = signalhub('hyperpad-' + doc, [
   'https://signalhub.mafintosh.com'
