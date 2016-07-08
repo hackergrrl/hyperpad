@@ -1,8 +1,8 @@
 var swarm = require('webrtc-swarm')
 var signalhub = require('signalhub')
 var hyperize = require('hyper-textarea')
-// var memdb = require('memdb')
-var leveljs = require('level-js')
+// var down = require('memdb')
+var down = require('level-js')
 var levelup = require('levelup')
 var query = require('query-string')
 
@@ -32,7 +32,7 @@ if (q.doc) {
   window.location.href += '?doc=' + doc
 }
 
-var string = hyperize(ta, levelup('hyperpad-'+doc, { db: leveljs }))
+var string = hyperize(ta, levelup('hyperpad-'+doc, { db: down }))
 
 document.getElementById('title').innerHTML = 'Untitled ' + doc
 
