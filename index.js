@@ -15,7 +15,6 @@ function getHeight () {
 }
 
 var ta = document.getElementById('pad')
-ta.setAttribute('placeholder', 'Write your brilliant things here! ♥')
 ta.style.width = "100%"
 ta.style.height = getHeight() + 'px'
 
