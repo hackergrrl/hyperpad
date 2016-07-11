@@ -10,7 +10,6 @@ function getHeight () {
   var body = document.body
   var html = document.documentElement
 
-  // return Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)
   return document.body.clientHeight - 115
 }
 
