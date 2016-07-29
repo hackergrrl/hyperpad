@@ -57,6 +57,18 @@ others. In the case that a user is offline, they can still freely make edits
 locally, which will propagate to others storing the document when they
 re-establish a network connection.
 
+Hyperpad is built in a modular fashion atop a set of do-one-thing-well modules:
+
+- [hyper-textarea](https://github.com/noffle/hyper-textarea): back a textarea
+  with a hyper-string for conflict-free p2p replication
+- [hyper-string](https://github.com/noffle/hyper-string): a conflict-free p2p
+  string data structure
+- [textarea-op-stream](https://github.com/noffle/textarea-op-stream): readable
+  stream of a textarea's inserts and deletes
+- lots of great modules from [mafintosh](https://github.com/mafintosh/):
+  [hyperlog](https://github.com/mafintosh/hyperlog),
+  [signalhub](https://github.com/mafintosh/signalhub), and others!
+
 ## License
 
 ISC
