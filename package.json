@@ -8,10 +8,10 @@
   },
   "main": "index.js",
   "scripts": {
-    "start": "browserify index.js > bundle.js && ecstatic -p 9966"
+    "start": "browserify index.js > bundle.js && ecstatic -p 7000"
   },
   "dependencies": {
-    "hyper-textarea": "0.0.4",
+    "hyper-textarea": "0.0.6",
     "level-js": "^2.2.4",
     "levelup": "^1.3.2",
     "memdb": "^1.3.1",
