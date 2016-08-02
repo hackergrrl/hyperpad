@@ -1,7 +1,7 @@
 {
   "name": "hyperpad",
   "description": "p2p collaborative text editor",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Stephen Whitmore <stephen.whitmore@gmail.com>",
   "repository": {
     "url": "git://github.com/noffle/hyperpad.git"
