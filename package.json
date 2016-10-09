@@ -11,6 +11,8 @@
     "start": "browserify index.js > bundle.js && ecstatic -p 7000"
   },
   "dependencies": {
+    "debug": "^2.2.0",
+    "end-of-stream": "^1.1.0",
     "hyper-textarea": "0.1.0",
     "level-js": "^2.2.4",
     "levelup": "^1.3.2",

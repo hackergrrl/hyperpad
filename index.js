@@ -5,6 +5,8 @@ var hyperize = require('hyper-textarea')
 var down = require('level-js')
 var levelup = require('levelup')
 var query = require('query-string')
+var debug = require('debug')('hyperpad')
+var eos = require('end-of-stream')
 
 function getHeight () {
   var body = document.body
@@ -43,13 +45,19 @@ var hub = signalhub('hyperpad-' + doc, [
 ])
 
 var sw = swarm(hub)
-
 sw.on('peer', function (peer, id) {
-  console.log('connected to a new peer:', id)
+  debug('replicating to a new peer:', id)
+
   var r = string.createReplicationStream({ live: true })
+  eos(r, end)
+  eos(peer, end)
   r.pipe(peer).pipe(r)
+
+  function end (err) {
+    debug('replication stream ended:', err)
+  }
 })
 
 sw.on('disconnect', function (peer, id) {
-  console.log('disconnected from a peer:', id)
+  debug('disconnected from a peer:', id)
 })
