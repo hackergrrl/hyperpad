@@ -41,7 +41,9 @@ var string = hyperize(ta, levelup('hyperpad-'+doc, { db: down }))
 document.getElementById('title').innerHTML = doc
 
 var hub = signalhub('hyperpad-' + doc, [
-  'https://signalhub.mafintosh.com'
+  'http://eight45.net:9400',
+  // 'http://localhost:2500'
+  // 'https://signalhub.mafintosh.com'
 ])
 
 var sw = swarm(hub)
