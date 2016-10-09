@@ -20,7 +20,7 @@
     "webrtc-swarm": "^2.6.1"
   },
   "devDependencies": {
-    "browserify": "^13.0.1",
+    "browserify": "^9.0.8",
     "ecstatic": "^1.4.1"
   },
   "license": "ISC"
