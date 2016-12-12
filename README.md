@@ -2,7 +2,7 @@
 
 > The peer-to-peer collaborative text editor.
 
-**WIP Demo**: http://hyperpad.io
+**WIP Demo**: http://pad.eight45.net
 
 ## Current Status
 
