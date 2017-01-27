@@ -48,7 +48,30 @@ var hub = signalhub('hyperpad-' + doc, [
   // 'https://signalhub.mafintosh.com'
 ])
 
-var sw = swarm(hub)
+var simplePeerConfig = {
+  "iceServers": [
+    {
+      "urls": "stun:23.21.150.121"
+    },
+    {
+      "username": "a03c3482a5ac94f85f98bf6478c7b779ed1c45756798f5246e870741ef0cda04",
+      "credential": "EIveHo0aA0i8WuCepOoWNGopB4LYxI72013GBv35ZGA=",
+      "urls": "turn:global.turn.twilio.com:3478?transport=udp"
+    },
+    {
+      "username": "a03c3482a5ac94f85f98bf6478c7b779ed1c45756798f5246e870741ef0cda04",
+      "credential": "EIveHo0aA0i8WuCepOoWNGopB4LYxI72013GBv35ZGA=",
+      "urls": "turn:global.turn.twilio.com:3478?transport=tcp"
+    },
+    {
+      "username": "a03c3482a5ac94f85f98bf6478c7b779ed1c45756798f5246e870741ef0cda04",
+      "credential": "EIveHo0aA0i8WuCepOoWNGopB4LYxI72013GBv35ZGA=",
+      "urls": "turn:global.turn.twilio.com:443?transport=tcp"
+    }
+  ]
+}
+
+var sw = swarm(hub, simplePeerConfig)
 sw.on('peer', function (peer, id) {
   debug('replicating to a new peer:', id)
 
