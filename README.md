@@ -31,17 +31,34 @@ source](https://github.com/ether/etherpad-lite), and can be deployed by anyone
 on any server. This lets any individual or group run etherpad and keep ownership
 and privacy to their data.
 
-Etherpad is most of the way there, but falls short in two ways:
+Etherpad is most of the way there, but Hyperpad goes the rest of the way in two
+crucial aspects:
 
-1. The individual or group must have a) the resources and b) the technical
-   knowledge to perpetually pay for and operate a server running the etherpad
-   software. Those without the resources or knowledge must resort to using a
-   "public pad", like [Mozilla's](https://public.etherpad-mozilla.org/). This is
-   an excellent altruistic service, but these pads are public, and Mozilla could
-   lose your data or decide to not run the service at any time.
-2. Users *must* have an active internet connection in order to participate. The
-   software becomes useless if an author is in a rural area or in transit on a
-   train, plane, or subway.
+### 1. No servers required
+
+In peer-to-peer networks, all users are equal.
+
+Nobody needs the monetary resources and technical know-how to run a server.
+
+Unlike centralized services, you own each pad you create. Turn on encryption,
+and your data becomes unreadable to anyone but those you grant access to. There
+are no service providers to go out of business and lose your data.
+
+Everything is client-side HTML and Javascript: you can just save the Hyperpad
+website and run it locally on your computer, and it will function just fine!
+
+### 2. Works great offline
+
+Not everybody in the world is online. Among those who are, many do not have
+consistent, broadband connections. People-respecting software must work
+excellently offline; no exceptions.
+
+Forgetting this is *The Silicon Valley Privilege* (TODO: link to article).
+
+Hyperpad uses an *eventually consistent* data structure called
+[hyperlog](https://github.com/mafintosh/hyperlog), which operates happily
+offline and will sync with other users whenever a network connection is
+available.
 
 ## How does it work?
 
@@ -68,6 +85,12 @@ Hyperpad is built in a modular fashion atop a set of do-one-thing-well modules:
 - lots of great modules from [mafintosh](https://github.com/mafintosh/):
   [hyperlog](https://github.com/mafintosh/hyperlog),
   [signalhub](https://github.com/mafintosh/signalhub), and others!
+
+## Coming Soon(tm)
+
+- faster operations (batching in the `hyper-string` layer)
+- a nicer front-end editor
+- encryption (/w separate read/write privileges)
 
 ## License
 
