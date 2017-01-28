@@ -2,7 +2,7 @@ var swarm = require('webrtc-swarm')
 var signalhub = require('signalhub')
 var hyperize = require('hyper-textarea')
 var hstring = require('hyper-string')
-// var down = require('memdb')
+var memdown = require('memdown')
 var down = require('level-js')
 var levelup = require('levelup')
 var query = require('query-string')
@@ -37,7 +37,8 @@ if (q.doc) {
   window.location.href += '?doc=' + doc
 }
 
-var string = hstring(levelup('hyperpad-'+doc, { db: down }))
+// var string = hstring(levelup('hyperpad-'+doc, { db: down }))
+var string = hstring(levelup('hyperpad-'+doc, { db: memdown }))
 hyperize(ta, string)
 
 document.getElementById('title').innerHTML = doc
