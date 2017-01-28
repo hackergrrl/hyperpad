@@ -48,7 +48,7 @@ var hub = signalhub('hyperpad-' + doc, [
   // 'https://signalhub.mafintosh.com'
 ])
 
-var simplePeerConfig = {
+var rtcConfig = {
   "iceServers": [
     {
       "urls": "stun:23.21.150.121"
@@ -71,7 +71,9 @@ var simplePeerConfig = {
   ]
 }
 
-var sw = swarm(hub, simplePeerConfig)
+var sw = swarm(hub, {
+  config: rtcConfig
+})
 sw.on('peer', function (peer, id) {
   debug('replicating to a new peer:', id)
 
