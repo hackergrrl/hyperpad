@@ -17,7 +17,7 @@
     "hyper-textarea": "0.2.0",
     "level-js": "^2.2.4",
     "levelup": "^1.3.2",
-    "memdb": "^1.3.1",
+    "memdown": "^1.2.4",
     "query-string": "^4.2.2",
     "signalhub": "^4.7.4",
     "webrtc-swarm": "^2.6.1"
