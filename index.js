@@ -8,6 +8,7 @@ var levelup = require('levelup')
 var query = require('query-string')
 var debug = require('debug')('hyperpad')
 var eos = require('end-of-stream')
+var hyperlog = require('hyperlog')
 
 function getHeight () {
   var body = document.body
@@ -38,7 +39,23 @@ if (q.doc) {
 }
 
 // var string = hstring(levelup('hyperpad-'+doc, { db: down }))
-var string = hstring(levelup('hyperpad-'+doc, { db: memdown }))
+// var string = hstring(levelup('hyperpad-'+doc, { db: memdown }))
+var indexDb = levelup('hyperpad-'+doc, { db: down })
+var memDb = levelup('hyperpad-'+doc, { db: memdown })
+var string = hstring(memDb)
+var storageLog = hyperlog(indexDb, string.log.valueEncoding)
+
+var r = storageLog.replicate({ live: true })
+var s = string.log.replicate({ live: true })
+r.pipe(s).pipe(r)
+
+r.on('end', function () {
+  console.log('replication /w indexeddb log ended!')
+})
+r.on('error', function (err) {
+  console.log('replication /w indexeddb log ended: ' + err)
+})
+
 hyperize(ta, string)
 
 document.getElementById('title').innerHTML = doc
