@@ -6,7 +6,7 @@ var memdown = require('memdown')
 var down = require('level-js')
 var levelup = require('levelup')
 var query = require('query-string')
-var debug = require('debug')('hyperpad')
+var debug = console.log//require('debug')('hyperpad')
 var eos = require('end-of-stream')
 var hyperlog = require('hyperlog')
 
@@ -108,3 +108,8 @@ sw.on('peer', function (peer, id) {
 sw.on('disconnect', function (peer, id) {
   debug('disconnected from a peer:', id)
 })
+
+sw.on('close', function () {
+  debug('signalhub connection lost')
+})
+
