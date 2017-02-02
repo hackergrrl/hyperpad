@@ -91,6 +91,7 @@ Hyperpad is built in a modular fashion atop a set of do-one-thing-well modules:
 - faster operations (batching in the `hyper-string` layer)
 - a nicer front-end editor
 - encryption (/w separate read/write privileges)
+- secure app delivery (maybe [hyperboot](https://github.com/substack/hyperboot))
 
 ## License
 
