@@ -4,14 +4,14 @@
 
 **WIP Demo**: http://pad.eight45.net
 
-<img
-src="https://cloud.githubusercontent.com/assets/427322/22719487/a1f6c684-ed5a-11e6-94fe-5a16f4ae99e6.png"/>
-
 ## Current Status
 
 First alpha release: *it works*! Desktop Chrome users can edit documents on- and
 off-line, and collaborate with others in real-time. Firefox is known to have
 some issues, and other browsers and mobile are untested.
+
+<img
+src="https://cloud.githubusercontent.com/assets/427322/22719487/a1f6c684-ed5a-11e6-94fe-5a16f4ae99e6.png"/>
 
 ## What is it?
 
