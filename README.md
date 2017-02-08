@@ -6,9 +6,12 @@
 
 ## Current Status
 
-First alpha release: *it works*! Desktop Chrome users can edit documents on- and
-off-line, and collaborate with others in real-time. Firefox is known to have
-some issues, and other browsers and mobile are untested.
+It seems to function well on desktop Chrome and Firefox: you can edit documents
+on- and off-line, and collaborate with others in real-time.
+
+Other desktop and all mobile browsers are untested, and may have some issues. If
+you find an interesting bug, [file an
+issue](https://github.com/noffle/hyperpad/issues)!
 
 <img
 src="https://cloud.githubusercontent.com/assets/427322/22719487/a1f6c684-ed5a-11e6-94fe-5a16f4ae99e6.png"/>
