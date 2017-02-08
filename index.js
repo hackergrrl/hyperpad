@@ -10,21 +10,7 @@ var debug = console.log//require('debug')('hyperpad')
 var eos = require('end-of-stream')
 var hyperlog = require('hyperlog')
 
-function getHeight () {
-  var body = document.body
-  var html = document.documentElement
-
-  return document.body.clientHeight - 115
-}
-
 var ta = document.getElementById('pad')
-ta.style.width = "100%"
-ta.style.height = getHeight() + 'px'
-
-onresize = function () {
-  ta.style.width = "100%"
-  ta.style.height = getHeight() + 'px'
-}
 
 onNewPad = function () {
   window.open(window.location.href.substring(0, window.location.href.indexOf('?')))
@@ -112,4 +98,3 @@ sw.on('disconnect', function (peer, id) {
 sw.on('close', function () {
   debug('signalhub connection lost')
 })
-

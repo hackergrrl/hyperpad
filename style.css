@@ -1,0 +1,79 @@
+html {
+  background: #fafafa;
+  font-family: -apple-system, BlinkMacSystemFont, /* MacOS and iOS */
+               'avenir next', avenir, /* MacOS and iOS */
+               'Segoe UI', /* Windows */
+               'lucida grande', /* Older MacOS */
+               'helvetica neue', helvetica, /* Older MacOS */
+               'Fira Sans', /* Firefox OS */
+               roboto, noto, /* Google stuff */
+               'Droid Sans', /* Old Google stuff */
+               cantarell, oxygen, ubuntu, /* Linux stuff */
+               'franklin gothic medium', 'century gothic', /* Windows stuff */
+               'Liberation Sans', /* Linux */
+               sans-serif; /* Everything else */
+  font-size: 16px;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+#wrap {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 5px 10px;
+  position: relative;
+}
+#hint {
+  font-size: 0.85em;
+  margin-bottom: 5px;
+  font-style: italic;
+  text-align: right;
+}
+.logo {
+  color: #aaa;
+  margin-top: 5px;
+  text-align: right;
+}
+.logo2 {
+  font-weight: 900;
+}
+#title {
+  font-weight: 300;
+  margin: 0;
+}
+#new-pad {
+  background: #fff;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  color: #444;
+  cursor: pointer;
+  font-size: 13px;
+  padding: .25em .75em .3em;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+#new-pad:hover,
+#new-pad:active,
+#new-pad:focus {
+  background: #eee;
+  border-color: #777;
+  color: #222;
+}
+#pad {
+  background: #fff;
+  border: 1px solid #ccc;
+  color: #333;
+  font-size: 16px;
+  flex-grow: 1;
+  outline: none;
+  padding: 1em;
+  resize: none;
+}
+#pad:focus {
+  border-color: #aaa;
+  color: #111;
+}
