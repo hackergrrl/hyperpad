@@ -1,32 +1,20 @@
-<style type="text/css">
-#hint {
-  font-size: 0.85em;
-  margin-bottom: 5px;
-  font-style: italic;
-  text-align: right;
-}
-.logo {
-  float: right;
-  margin-left: 100%;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  color: #AAAAAA;
-}
-.logo2 {
-  font-weight: 900;
-}
-#new-pad {
-  position: absolute;
-  right: 0;
-  top: 0;
-  margin: 5px;
-}
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>hyperpad</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-  <h1 id="title">Initializing..</h1>
-  <input id="new-pad" type="button" value="New Pad" onclick="onNewPad()"/>
-  <div id="hint">Share this URL to let others edit this pad!</div>
-  <textarea id="pad" width="100%" placeholder="A shining, brand new document."></textarea>
-  <span class="logo">hyper<span class="logo2">PAD</span></span>
+  <div id="wrap">
+    <h1 id="title">Initializing..</h1>
+    <input id="new-pad" type="button" value="New Pad" onclick="onNewPad()"/>
+    <div id="hint">Share this URL to let others edit this pad!</div>
+    <textarea id="pad" placeholder="A shining, brand new document."></textarea>
+    <div class="logo">hyper<span class="logo2">PAD</span></div>
+  </div>
   <script src="bundle.js"></script>
 </body>
+</html>
