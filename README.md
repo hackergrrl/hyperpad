@@ -59,7 +59,7 @@ Not everybody in the world is online. Among those who are, many do not have
 consistent, broadband connections. People-respecting software must work
 excellently offline; no exceptions.
 
-Forgetting this is *The Silicon Valley Privilege* (TODO: link to article).
+Forgetting this is [*The Silicon Valley Privilege*](http://blog.eight45.net/sv-privilege.html).
 
 Hyperpad uses an *eventually consistent* data structure called
 [hyperlog](https://github.com/mafintosh/hyperlog), which operates happily
@@ -75,7 +75,7 @@ peer-to-peer primitives like
 documents to those with access.
 
 The act of having a document open in your browser immediately lets a user act
-like a host for that document's data, sharing it in real-time with others with
+as a host for that document's data, sharing it in real-time with others with
 others. In the case that a user is offline, they can still freely make edits
 locally, which will propagate to others storing the document when they
 re-establish a network connection.
@@ -94,11 +94,11 @@ Hyperpad is built in a modular fashion atop a set of do-one-thing-well modules:
 
 ## Coming Soon(tm)
 
-- faster operations (batching in the `hyper-string` layer)
-- a nicer front-end editor
-- encryption (/w separate read/write privileges)
-- secure app delivery (maybe [hyperboot](https://github.com/substack/hyperboot))
+- Faster operations (batching in the `hyper-string` layer)
+- A nicer front-end editor
+- Encryption (with separate read/write privileges)
+- Secure app delivery (maybe [hyperboot](https://github.com/substack/hyperboot))
 
 ## License
 
-ISC
+[ISC](https://en.wikipedia.org/wiki/ISC_license)
