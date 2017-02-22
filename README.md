@@ -13,6 +13,11 @@ Other desktop and all mobile browsers are untested, and may have some issues. If
 you find an interesting bug, [file an
 issue](https://github.com/noffle/hyperpad/issues)!
 
+**Field tests** by others is very helpful at this point. If you try out Hyperpad
+with some friends, please [share your
+experience](https://github.com/noffle/hyperpad/issues/new) so I can direct my
+efforts as appropriate.
+
 <img
 src="https://cloud.githubusercontent.com/assets/427322/22719487/a1f6c684-ed5a-11e6-94fe-5a16f4ae99e6.png"/>
 
