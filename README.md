@@ -59,7 +59,7 @@ Not everybody in the world is online. Among those who are, many do not have
 consistent, broadband connections. People-respecting software must work
 excellently offline; no exceptions.
 
-Forgetting this is [*The Silicon Valley Privilege*](http://blog.eight45.net/sv-privilege.html).
+Forgetting this is the *The Silicon Valley Privilege* (TODO: link to article).
 
 Hyperpad uses an *eventually consistent* data structure called
 [hyperlog](https://github.com/mafintosh/hyperlog), which operates happily
