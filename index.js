@@ -12,6 +12,17 @@ var hyperlog = require('hyperlog')
 
 var ta = document.getElementById('pad')
 
+ta.addEventListener('keydown', function (e) {
+  if (e.keyCode !== 9) return
+  var start = this.selectionStart
+  var end = this.selectionEnd
+  var target = e.target
+  var value = target.value
+  target.value = value.substring(0, start) + "\t" + value.substring(end)
+  this.selectionStart = this.selectionEnd = start + 1
+  e.preventDefault()
+});
+
 onNewPad = function () {
   window.open(window.location.href.substring(0, window.location.href.indexOf('?')))
 }
