@@ -2,12 +2,15 @@
 
 > The peer-to-peer collaborative text editor.
 
-**WIP Demo**: http://pad.eight45.net
+~**WIP Demo**: http://pad.eight45.net~
 
 ## Current Status
 
+**Partially functional**
+
 It seems to function well on desktop Chrome and Firefox: you can edit documents
-on- and off-line, and collaborate with others in real-time.
+on- and off-line, and collaborate with others in real-time. Browser storage is
+broken right now.
 
 Other desktop and all mobile browsers are untested, and may have some issues. If
 you find an interesting bug, [file an
