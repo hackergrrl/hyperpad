@@ -1,35 +1,21 @@
 # hyperpad
 
-> The peer-to-peer collaborative text editor.
-
-~**WIP Demo**: http://pad.eight45.net~
-
-## Current Status
-
-**Partially functional**
-
-It seems to function well on desktop Chrome and Firefox: you can edit documents
-on- and off-line, and collaborate with others in real-time. Browser storage is
-broken right now.
-
-Other desktop and all mobile browsers are untested, and may have some issues. If
-you find an interesting bug, [file an
-issue](https://github.com/noffle/hyperpad/issues)!
-
-**Field tests** by others is very helpful at this point. If you try out Hyperpad
-with some friends, please [share your
-experience](https://github.com/noffle/hyperpad/issues/new) so I can direct my
-efforts as appropriate.
-
-<img
-src="https://cloud.githubusercontent.com/assets/427322/22719487/a1f6c684-ed5a-11e6-94fe-5a16f4ae99e6.png"/>
+> A peer-to-peer collaborative text editor for humans and communities.
 
 ## What is it?
 
-Hyperpad is a free, open source, distributed text editor for use by groups and
-individuals. Document authors control who gets access, and nobody needs to pay
-for perpetual server hosting. No technical know-how is required beyond opening
-up http://hyperpad.io and writing a document.
+Hyperpad is a free, open source, peer-to-peer text editor for people and their
+communities. Authors control who gets access, and data is hosted by the peers
+who are interested in it.
+
+## Current Status
+
+I've paused work on the web client in favour of building out an Electron-based
+native client, [hyperpad-desktop](https://github.com/noffle/hyperpad-desktop).
+This lets me dodge some difficult problems around web tech (indexed-db
+performance; webrtc) and focus on making the core
+[hyper-string](https://github.com/noffle/hyper-string) primitive robust and
+durable.
 
 ## Why another collaborative editor?
 
@@ -102,8 +88,8 @@ Hyperpad is built in a modular fashion atop a set of do-one-thing-well modules:
 
 ## Coming Soon(tm)
 
-- Faster operations (batching in the `hyper-string` layer)
-- A nicer front-end editor
+- [hyperpad-desktop](https://github.com/noffle/hyperpad-desktop)
+- ~Faster operations (batching in the `hyper-string` layer)~
 - Encryption (with separate read/write privileges)
 - Secure app delivery (maybe [hyperboot](https://github.com/substack/hyperboot))
 
