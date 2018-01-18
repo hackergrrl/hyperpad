@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "browserify": "^13.1.1",
-    "ecstatic": "^1.4.1"
+    "ecstatic": "^3.1.1"
   },
   "license": "ISC"
 }
