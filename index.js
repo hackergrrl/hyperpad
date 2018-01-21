@@ -27,8 +27,7 @@ if (q.doc) {
 // var string = hstring(levelup('hyperpad-'+doc, { db: down }))
 // var string = hstring(levelup('hyperpad-'+doc, { db: memdown }))
 var indexDb = levelup('hyperpad-'+doc, { db: down })
-var memDb = levelup('hyperpad-'+doc, { db: memdown })
-var string = hstring(memDb)
+var string = hstring(indexDb)
 var storageLog = hyperlog(indexDb, string.log.valueEncoding)
 
 var r = storageLog.replicate({ live: true })
